@@ -1,0 +1,73 @@
+$(function(){
+    $(window).scroll(function(){
+        var top = $('html,body').scrollTop();
+        if(top>100){
+            $('.img1').css({'top':'100px','opacity':'1'});
+            $('.img2').css({'top':'206px','opacity':'1'});
+            setTimeout(function(){
+                $('.guangbiao').css({
+                    'left':'953px',
+                    'opacity':'1'
+                });
+                $('.wenan12').css({
+                    'top':'0px',
+                    'opacity':'1'
+                });
+            },1100)
+        }
+        if(top>620){
+            $('.guangb').css({
+                'opacity':'1',
+                'background':'url(img/guangbiao.png) 0px 0px no-repeat'
+            })
+            setTimeout(function(){
+                $('.wenan').css({
+                    'top':'-276px',
+                    'opacity':'1'
+                });
+            },1100)
+            setTimeout(function(){
+                $('.remen').css({
+                    'top':'-140px',
+                    'opacity':'1'
+                });
+            },1500)
+        }
+        if(top>1400){
+            $('.guangbiao2').css({
+                'background':'url(img/guangbiao.png) 0px 0px no-repeat',
+                'opacity':'1'
+            })
+            $('.wode').css({
+                'top':'520px',
+                'opacity':'1'
+            })
+            setTimeout(function(){
+                $('.wenan1').css({
+                    'top':'430px',
+                    'opacity':'1'
+                });
+            },1500)
+            setTimeout(function(){
+                $('.changtiao').css({
+                    'width':'66px',
+                    'opacity':'1'
+                });
+            },2000)
+        }
+		if(top >= 800){
+			$('.fanhui').css({
+			    'display':'block'
+			})
+		}else{
+			$('.fanhui').css({
+			    'display':'none'
+			})
+		}
+    })
+	
+		$(".fanhui").click(function(){
+		//6.利用jquery的aninte()方法让火箭以动画的形式回到顶部
+		$("html,body").animate({scrollTop:"0px"},100);
+		});
+})
